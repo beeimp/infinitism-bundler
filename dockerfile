@@ -5,8 +5,7 @@ ENV APP_PORT=3000 APP_DIR=/app
 
 WORKDIR APP_DIR
 
-ADD package.json .
-ADD package-lock.json .
+ADD package*.json ./
 ADD . .
 
 RUN npm install 
