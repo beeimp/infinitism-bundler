@@ -8,10 +8,13 @@ WORKDIR APP_DIR
 ADD package*.json ./
 ADD . .
 
-RUN npm install 
+# yarn 설치
+RUN npm install -g yarn
 
-CMD ["npm", "run", "preprocess"]
+RUN yarn
 
-CMD ["npm", "run", "bundler", "--unsafe"]
+CMD ["yarn", "preprocess"]
+
+CMD ["yarn", "run", "bundler", "--unsafe"]
 
 EXPOSE 3000
