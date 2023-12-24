@@ -8,9 +8,6 @@ WORKDIR APP_DIR
 ADD package*.json ./
 ADD . .
 
-# yarn 설치
-RUN npm install -g yarn
-
 RUN yarn
 
 CMD ["yarn", "preprocess"]
