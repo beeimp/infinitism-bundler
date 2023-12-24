@@ -24,7 +24,7 @@ pipeline {
         }
         stage("Build") {
         steps{
-            sh "docker build -t aa-wallet ./"
+            sh "docker buildx build -t aa-wallet ./"
         }
         }
         stage("RUN") {
