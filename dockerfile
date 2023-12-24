@@ -1,7 +1,7 @@
 FROM node:20.9.0
 
 LABEL name="aa-wallet"
-ENV APP_PORT=3000 APP_DIR=/app
+ENV APP_DIR=/app
 
 WORKDIR APP_DIR
 
@@ -14,4 +14,4 @@ CMD ["npm", "run", "preprocess"]
 
 CMD ["npm", "run", "bundler", "--unsafe"]
 
-EXPOSE APP_PORT
+EXPOSE 3000
